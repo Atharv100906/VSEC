@@ -6,58 +6,36 @@
 
 body {
     height: 100vh;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+
+    overflow: hidden;
 }
 
-/* Heading */
-h1 {
-    margin-bottom: 40px;
-    color: #333;
-}
 
-/* Main square area */
-.container {
-    width: 280px;
-    height: 280px;* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* MAIN CONTAINER */
 
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-}
-
-/* Heading */
-h1 {
-    margin-bottom: 40px;
-    color: #333;
-}
-
-/* Main square area */
 .container {
     width: 280px;
     height: 280px;
+
     position: relative;
+
     overflow: visible;
+
+    cursor: pointer;
 }
 
-/* Atharv text */
+
+/* NAME */
+
 .word {
     position: absolute;
+
     top: 50%;
     left: 50%;
 
@@ -65,189 +43,106 @@ h1 {
 
     font-size: 45px;
     font-weight: bold;
+
     color: #222;
 
     opacity: 0;
+
     z-index: 1;
 
     transition: opacity 0.5s ease;
 }
 
-/* Common square style */
+
+/* COMMON SQUARE */
+
 .square {
-    width: 136px;
-    height: 136px;
+    width: 140px;
+    height: 140px;
 
     position: absolute;
+
     z-index: 2;
 
-    transition: transform 0.8s ease;
+    transition: transform 2s ease-in-out;
 }
 
-/* Red - Top Left */
+
+/* TOP LEFT */
+
 .square1 {
     top: 0;
     left: 0;
+
     background-color: #ff4d4d;
 }
 
-/* Blue - Top Right */
+
+/* TOP RIGHT */
+
 .square2 {
     top: 0;
     right: 0;
+
     background-color: #3498db;
 }
 
-/* Green - Bottom Left */
+
+/* BOTTOM LEFT */
+
 .square3 {
     bottom: 0;
     left: 0;
+
     background-color: #2ecc71;
 }
 
-/* Yellow - Bottom Right */
+
+/* BOTTOM RIGHT */
+
 .square4 {
     bottom: 0;
     right: 0;
+
     background-color: #f1c40f;
 }
 
-/* Show Atharv */
+
+/* =========================
+   MOUSE OVER
+   ========================= */
+
+
+/* LEFT TOP */
+
+.container.active .square1 {
+    transform: translate(-140px, -40px) rotate(90deg);
+}
+
+
+/* LEFT BOTTOM */
+
+.container.active .square3 {
+    transform: translate(-140px, -40px) rotate(90deg);
+}
+
+
+/* RIGHT TOP */
+
+.container.active .square2 {
+    transform: translate(140px, -40px) rotate(-90deg);
+}
+
+
+/* RIGHT BOTTOM */
+
+.container.active .square4 {
+    transform: translate(140px, -40px) rotate(-90deg);
+}
+
+
+/* SHOW NAME */
+
 .container.active .word {
     opacity: 1;
-}
-
-/* =========================
-   LEFT SIDE
-   ========================= */
-
-/* Red */
-.container.active .square1 {
-    transform: translate(-70px, -8px) rotate(90deg);
-}
-
-/* Green */
-.container.active .square3 {
-    transform: translate(-70px, 8px) rotate(90deg);
-}
-
-/* =========================
-   RIGHT SIDE
-   ========================= */
-
-/* Blue */
-.container.active .square2 {
-    transform: translate(70px, -8px) rotate(90deg);
-}
-
-/* Yellow */
-.container.active .square4 {
-    transform: translate(70px, 8px) rotate(90deg);
-}
-
-/* Instruction text */
-p {
-    margin-top: 50px;
-    color: #555;
-    font-size: 18px;
-}
-    position: relative;
-    overflow: visible;
-}
-
-/* Atharv text */
-.word {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    font-size: 45px;
-    font-weight: bold;
-    color: #222;
-
-    opacity: 0;
-    z-index: 1;
-
-    transition: opacity 0.5s ease;
-}
-
-/* Common square style */
-.square {
-    width: 136px;
-    height: 136px;
-
-    position: absolute;
-    z-index: 2;
-
-    transition: transform 0.8s ease;
-}
-
-/* Red - Top Left */
-.square1 {
-    top: 0;
-    left: 0;
-    background-color: #ff4d4d;
-}
-
-/* Blue - Top Right */
-.square2 {
-    top: 0;
-    right: 0;
-    background-color: #3498db;
-}
-
-/* Green - Bottom Left */
-.square3 {
-    bottom: 0;
-    left: 0;
-    background-color: #2ecc71;
-}
-
-/* Yellow - Bottom Right */
-.square4 {
-    bottom: 0;
-    right: 0;
-    background-color: #f1c40f;
-}
-
-/* Show HELLO */
-.container.active .word {
-    opacity: 1;
-}
-
-/* =========================
-   LEFT SIDE
-   ========================= */
-
-/* Red */
-.container.active .square1 {
-    transform: translate(-70px, -8px) rotate(90deg);
-}
-
-/* Green */
-.container.active .square3 {
-    transform: translate(-70px, 8px) rotate(90deg);
-}
-
-/* =========================
-   RIGHT SIDE
-   ========================= */
-
-/* Blue */
-.container.active .square2 {
-    transform: translate(70px, -8px) rotate(90deg);
-}
-
-/* Yellow */
-.container.active .square4 {
-    transform: translate(70px, 8px) rotate(90deg);
-}
-
-/* Instruction text */
-p {
-    margin-top: 50px;
-    color: #555;
-    font-size: 18px;
 }

@@ -1,6 +1,8 @@
 const container = document.getElementById("squareContainer");
 
-/* Mouse enters */
+
+/* Mouse enters the squares */
+
 container.addEventListener("mouseenter", function () {
 
     container.classList.add("active");
@@ -8,7 +10,8 @@ container.addEventListener("mouseenter", function () {
 });
 
 
-/* Mouse leaves */
+/* Mouse leaves the squares */
+
 container.addEventListener("mouseleave", function () {
 
     container.classList.remove("active");
