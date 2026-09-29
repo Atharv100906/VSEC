@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 function Input() {
   const navigate = useNavigate();
@@ -7,7 +7,7 @@ function Input() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
 
     navigate("/display", {
@@ -16,7 +16,7 @@ function Input() {
         email: email,
       },
     });
-  };
+  }
 
   return (
     <div>
