@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,143 +7,72 @@
 
 body {
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #f2f2f2;
-
-    overflow: hidden;
+    background: #f2f2f2;
 }
-
-
-/* MAIN CONTAINER */
 
 .container {
     width: 280px;
     height: 280px;
-
     position: relative;
-
-    overflow: visible;
-
     cursor: pointer;
 }
 
-
-/* NAME */
-
 .word {
     position: absolute;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
-
     font-size: 45px;
     font-weight: bold;
-
-    color: #222;
-
     opacity: 0;
-
-    z-index: 1;
-
-    transition: opacity 0.5s ease;
+    transition: 0.5s;
 }
-
-
-/* COMMON SQUARE */
 
 .square {
     width: 140px;
     height: 140px;
-
     position: absolute;
-
-    z-index: 2;
-
-    transition: transform 2s ease-in-out;
+    transition: 2s;
 }
-
-
-/* TOP LEFT */
 
 .square1 {
     top: 0;
     left: 0;
-
-    background-color: #ff4d4d;
+    background: red;
 }
-
-
-/* TOP RIGHT */
 
 .square2 {
     top: 0;
     right: 0;
-
-    background-color: #3498db;
+    background: blue;
 }
-
-
-/* BOTTOM LEFT */
 
 .square3 {
     bottom: 0;
     left: 0;
-
-    background-color: #2ecc71;
+    background: green;
 }
-
-
-/* BOTTOM RIGHT */
 
 .square4 {
     bottom: 0;
     right: 0;
-
-    background-color: #f1c40f;
+    background: yellow;
 }
 
-
-/* =========================
-   MOUSE OVER
-   ========================= */
-
-
-/* LEFT TOP */
-
-.container.active .square1 {
+.container:hover .square1,
+.container:hover .square3 {
     transform: translate(-140px, -40px) rotate(90deg);
 }
 
-
-/* LEFT BOTTOM */
-
-.container.active .square3 {
-    transform: translate(-140px, -40px) rotate(90deg);
-}
-
-
-/* RIGHT TOP */
-
-.container.active .square2 {
+.container:hover .square2,
+.container:hover .square4 {
     transform: translate(140px, -40px) rotate(-90deg);
 }
 
-
-/* RIGHT BOTTOM */
-
-.container.active .square4 {
-    transform: translate(140px, -40px) rotate(-90deg);
-}
-
-
-/* SHOW NAME */
-
-.container.active .word {
+.container:hover .word {
     opacity: 1;
+    z-index: 1;
 }

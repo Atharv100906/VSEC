@@ -1,0 +1,153 @@
+
+/* Main Page */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Main Container */
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Main Heading */
+.container h1 {
+  text-align: center;
+  color: #2563eb;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.container h2 {
+  color: #334155;
+  font-size: 21px;
+  margin-top: 32px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Input Fields */
+.container input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  margin: 14px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.container input:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.13);
+}
+
+.container input::placeholder {
+  color: #94a3b8;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2563eb;
+  color: #ffffff;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Book List Items */
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 15px;
+  margin: 12px 0;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.book-item:hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.book-item span {
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Select Button */
+.book-item button {
+  flex-shrink: 0;
+  background: #0f766e;
+}
+
+.book-item button:hover {
+  background: #115e59;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .container {
+    margin: 20px 12px;
+    padding: 22px 16px;
+  }
+
+  .container h1 {
+    font-size: 25px;
+  }
+
+  .buttons button {
+    flex: 1;
+  }
+
+  .book-item {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .book-item {
+    flex-direction: column;
+  }
+
+  .book-item button {
+    width: 100%;
+  }
+}
